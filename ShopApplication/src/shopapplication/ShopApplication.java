@@ -34,7 +34,7 @@ public class ShopApplication {
             System.out.println(employee.getFullname()+ "\t" +employee.getAddress()+ "\t" +employee.getPhoneNumber());
         }
         if(sql.connectMySQL()){
-            ResultSet data= sql.ExecuteSelectQuery("Select * from product");
+            ResultSet data= sql.ExecuteSelectQuery("Select * from Product");
             try {
                 while (data.next()) {                
             }
