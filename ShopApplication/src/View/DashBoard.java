@@ -75,6 +75,7 @@ public class DashBoard extends javax.swing.JFrame {
         jMenuItem15.setText("jMenuItem15");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(645, 490));
         getContentPane().setLayout(null);
 
         jLabelUser.setText("User");
@@ -89,12 +90,12 @@ public class DashBoard extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(390, Short.MAX_VALUE)
                 .addComponent(jLabelUser)
                 .addGap(18, 18, 18)
                 .addComponent(jLabelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +109,9 @@ public class DashBoard extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 640, 461);
+        jPanel1.setBounds(0, 0, 640, 460);
+
+        jMenuBar2.setPreferredSize(new java.awt.Dimension(423, 20));
 
         jMenu1.setText("Quản lý hóa đơn");
 
@@ -269,7 +272,9 @@ public class DashBoard extends javax.swing.JFrame {
     private void jMenuItemAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAddEmployeeActionPerformed
         // TODO add your handling code here:
         if (Login.RoleId== 1) {
-            
+            AddNewEmployee addNewEmployee= new AddNewEmployee();
+            addNewEmployee.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_jMenuItemAddEmployeeActionPerformed
 

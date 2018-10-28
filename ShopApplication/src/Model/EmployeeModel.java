@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  * @author Duy.hv150601
  */
 public class EmployeeModel extends Employee{
+    
     MySqlHandler sql= MySqlHandler.getInstance();
     public ArrayList<Employee> GetAllEmployee(){
         ArrayList<Employee> employees= new ArrayList<>();
@@ -39,5 +40,12 @@ public class EmployeeModel extends Employee{
             }
         }
         return employees;
+    }
+    public void AddNewEmployee(String Fullname, String Address, String PhoneNumber, String Username){
+        String query= "Insert into Employee(Fullname, Address, PhoneNumber, User_id) values('"+Fullname+"','"+ Address+"','"+PhoneNumber+"',(Select Id from User where User.Username='"+Username+"');";
+        if(sql.connectMySQL()){
+            sql.ExecuteQuery(query);
+            System.out.println("Success!");
+        }
     }
 }

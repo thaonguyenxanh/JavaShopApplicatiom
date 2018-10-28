@@ -20,6 +20,6 @@ public class EmployeeController {
         return employees;
     }
     public void AddNewEmployee(String Fullname, String Address, String PhoneNumber, String Username){
-        String query= "Insert into Employee(Fullname= '"+Fullname+"', Address= '"+ Address+"', PhoneNumber= '"+PhoneNumber+"') values";
+        employeeModel.AddNewEmployee(Fullname, Address, PhoneNumber, Username);
     }
 }

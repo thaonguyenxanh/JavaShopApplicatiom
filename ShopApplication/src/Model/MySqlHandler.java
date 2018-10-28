@@ -13,7 +13,7 @@ public class MySqlHandler {
     
     private static MySqlHandler Instance;// tranh exception thay vi dat bang public, chi su dung static o day
     private final String url= "jdbc:mysql://localhost:3306/ShopApplication";
-    private final String password= "";
+    private final String password= "12345678";
     private final String user= "root";
     private Connection conn= null;
     private Statement state= null;
